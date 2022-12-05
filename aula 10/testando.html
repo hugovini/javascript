@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main{
+            background-color: rgba(127, 255, 212, 0.534);
+            width: 600px;
+            height: 260px;
+            margin: auto;
+            border-radius: 0px 0px 20px 20px;
+
+        }
+
+        h1{
+            font-size: 3em;
+            padding: 20px;
+            text-align: center;
+        }
+
+        div#conteudo{
+           text-align: center;
+           margin: auto;
+        }
+
+        input{
+            display: block;
+            margin: auto;
+        }
+
+        input[type=number]{
+            text-align: center;
+        }
+
+        input[type=submit]{
+            margin-top: 10px;
+        }
+
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somando Valores</h1>
+            <div id="conteudo">
+                <label for="inum1">Número 1:</label>
+                <input type="number" name="num1" id="inum1" minlength="1"> <p>  + </p>
+                <label for="inum2">Número 2:</label>
+                <input type="number" name="num2" id="inum2" minlength="1">
+                <input type="submit" value="somar" onclick="somar()">
+                        <div id="res">
+                Resultado
+                        </div>
+            </div>
+    </main>
+</body>
+<script>
+    function somar(){
+        var tn1 = window.document.getElementById('inum1')
+        var tn2 = window.document.getElementById('inum2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML=`A soma entre ${n1} + ${n2} é igual à = ${s}`
+    }
+</script>
+</html>
